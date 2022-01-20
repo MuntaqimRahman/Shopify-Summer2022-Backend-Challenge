@@ -61,16 +61,20 @@ An example body specifying all fields is below:
 
 # Detailed Calls - GET,PUT,PATCH,DELETE #
 
-GET/PUT/PATCH/DELETE https://muntaqim-shopify-backend2022.herokuapp.com/v1/inventory/<pk>
-
- A GET call to the above endpoint will retreive just that single inventory object.
+GET/PUT/PATCH/DELETE https://muntaqim-shopify-backend2022.herokuapp.com/v1/inventory/[pk]/
   
+ Modify a specific inventory item by referring to it with its primary key as shown in the above endpoint.
+
+ A GET call to the above endpoint will retreive just that single inventory object's information.
+
  PUT will replace all fields with the new data. If a field is not speicified, it will become its default (E.g if msrp is not defined in the request body, it will become 0). 
+
  PATCH will only update the specified fields (E.g if msrp is not defined in the request body, it will remain as is).
+ 
  DELETE will remove the inventory item from the database.
   
  
- I've tried to think of future developments by doing things manually where possible in order to allow for future customizability. API verisioning also makes space for future
- features without modifying the existing API server.
+ I've thought future developments by doing things manually where possible in order to allow for future customizability and not lock the server into design decisions early on.
+ API verisioning also makes space for future features without modifying the existing API server.
   
  Thanks for the challenge. I had a great time making the API and tried to focus on doing the core functions well while making space for new features.
