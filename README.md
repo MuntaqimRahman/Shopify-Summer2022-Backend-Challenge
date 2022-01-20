@@ -30,9 +30,10 @@ When making a GET call, you can choose to invoke pagination and filter for items
 GET https://muntaqim-shopify-backend2022.herokuapp.com/v1/inventory/
 
   It has the following query parameters:
+  
     page_size -> num of the amount of inventory items per page - defaults to 10
     page -> the page you want to navigate - defaults to 1
-    \
+    
     name -> filters for name fields that *contains* your filter, does not require an exact match
     description -> filters for name fields that *contains* your filter, does not require an exact match
     min_msrp, max_msrp -> filters for inventory msrp that is >= the min_msrp, and <= the max_msrp
