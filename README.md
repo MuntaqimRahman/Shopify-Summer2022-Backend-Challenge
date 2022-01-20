@@ -74,7 +74,7 @@ GET/PUT/PATCH/DELETE https://muntaqim-shopify-backend2022.herokuapp.com/v1/inven
  DELETE will remove the inventory item from the database.
   
  
- I've thought future developments by doing things manually where possible in order to allow for future customizability and not lock the server into design decisions early on.
+ I've considered future developments by doing things manually where possible in order to allow for future customizability and not lock the server into design decisions early on.
  API verisioning also makes space for future features without modifying the existing API server.
   
  Thanks for the challenge. I had a great time making the API and tried to focus on doing the core functions well while making space for new features.
