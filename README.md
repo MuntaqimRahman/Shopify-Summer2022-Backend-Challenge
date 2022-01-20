@@ -14,7 +14,7 @@ I also implemented versioning to make space for new features and clients in the 
 The salient code is in the Inventory subfolder which contains the app for Inventory server. The models feed into the serializers which are called by the views.
 
 Each inventory item has the following fields:
-
+```
 created -> auto added field denoting when the inventory was added to the API
 pk -> unique primary key of the inventory item
 name -> name of the inventory item (required)
@@ -22,7 +22,7 @@ amount -> the amount of the inventory in stock (required, must be >= 0)
 description -> description on the inventory item
 msrp -> the msrp of the unit, assumed to be CAD or USD so has two decimal places (must be >= 0)
 tags -> array of tags that can be used to filter it
-
+```
 # Filtering and Pagination - GET #
 
 When making a GET call, you can choose to invoke pagination and filter for items. The query parameters works as follows:
