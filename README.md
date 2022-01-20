@@ -23,7 +23,7 @@ description -> description on the inventory item
 msrp -> the msrp of the unit, assumed to be CAD or USD so has two decimal places (must be >= 0)
 tags -> array of tags that can be used to filter it
 
-#Filtering and Pagination - GET
+# Filtering and Pagination - GET #
 
 When making a GET call, you can choose to invoke pagination and filter for items. The query parameters works as follows:
 
@@ -43,7 +43,7 @@ GET https://muntaqim-shopify-backend2022.herokuapp.com/v1/inventory/
   If you apply multiple filters the items returned will be those that pass ALL filters. An example of applying multiple filters is seen below:
   https://muntaqim-shopify-backend2022.herokuapp.com/v1/inventory/?min_msrp=1&name=pen&description=Transparent&min_amount=1&max_amount=45&tags=["Red"]
   
-#POST Call
+# POST Call #
 
 POST https://muntaqim-shopify-backend2022.herokuapp.com/v1/inventory/
 
@@ -59,7 +59,7 @@ An example body specifying all fields is below:
 }
 
 
-#Detailed Calls - GET,PUT,PATCH,DELETE
+# Detailed Calls - GET,PUT,PATCH,DELETE #
 
 GET/PUT/PATCH/DELETE https://muntaqim-shopify-backend2022.herokuapp.com/v1/inventory/<pk>
 
