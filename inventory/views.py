@@ -24,7 +24,7 @@ class InventoryList(generics.ListCreateAPIView):
     Listing objects or creating a new one
     """
 
-    queryset = Inventory.objects.all()
+    queryset = Inventory.objects.all().order_by('pk')
     serializer_class = InventorySerializerVersion1
     pagination_class = PaginationConfig
     filterset_class = InventoryFilter
