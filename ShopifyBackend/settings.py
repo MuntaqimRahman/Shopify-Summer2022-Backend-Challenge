@@ -16,7 +16,7 @@ import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = 'tOryoWSTALYmENtU'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
@@ -85,7 +85,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'd6aldt5sr1np4j',
         'USER': 'dderbdpketgajt',
-        'PASSWORD': os.environ.get('DB_PASSWORD'),
+        'PASSWORD': 'ee4f2e2c928db5cc0ed7f69030699ff41016d9f9d4e83be6a1cc5ab191e70d47',
         'HOST': 'ec2-184-73-243-101.compute-1.amazonaws.com',
         'PORT': '5432',
 
