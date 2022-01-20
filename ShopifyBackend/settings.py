@@ -11,8 +11,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+import django_heroku
 import os
-import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -84,10 +84,18 @@ WSGI_APPLICATION = 'ShopifyBackend.wsgi.application'
 
 DATABASES = {
 
-}
+    'default': {
 
-db_from_env = dj_database_url.config(conn_max_age=600)
-DATABASES['default'].update(db_from_env)
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd6aldt5sr1np4j',
+        'USER': 'dderbdpketgajt',
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
+        'HOST': 'ec2-184-73-243-101.compute-1.amazonaws.com',
+        'PORT': '5432',
+
+    }
+
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -123,9 +131,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR,'static')
-STATICFILES_DIRS = [os.path.join(BASE_DIR,'project_name/static')]
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+django_heroku.settings(locals())
+# STATICFILES_DIRS = [os.path.join(BASE_DIR,'project_name/static')]
+
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL = '/media/'
